@@ -3,7 +3,7 @@
 
 Para correr el proyecto es necesario Node 18.17 al menos, instalar dependencias y correr npm run dev
 
-[link](https://movies-self-three.vercel.app/)
+[DEMO](https://movies-self-three.vercel.app/)
 
 
 # Movie Recommendation Application with Server-Side Rendering
