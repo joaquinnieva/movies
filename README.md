@@ -1,3 +1,10 @@
+## Hice solo los requerimientos principales por tema de tiempo, aproximadamente lo desarrollé en 8hs.
+## Mejoras por hacer: estetica general y en vistas mobile, manejador de errores en llamada a Endpoints 
+
+Para correr el proyecto es necesario Node 18.17 al menos, instalar dependencias y correr npm run dev
+
+
+
 # Movie Recommendation Application with Server-Side Rendering
 
 Welcome to the ultimate movie recommendation application challenge! In this challenge, you'll build an application that allows users to discover and explore movies with the added benefit of Server-Side Rendering (SSR) for improved performance and SEO. You'll utilize The Movie Database (TMDb) API to fetch movie data and incorporate it into your application. You'll implement this using Next.js, incorporating Material or Tailwind UI for the user interface and TypeScript for type safety.
