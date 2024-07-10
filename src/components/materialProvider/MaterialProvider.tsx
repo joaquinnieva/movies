@@ -14,6 +14,7 @@ const roboto = Roboto({
 export function MaterialProvider({ children }: { children: ReactNode }) {
   const themeType: any = useAppSelector((state) => state.themeReducer.theme);
   console.log(themeType);
+
   const theme = createTheme({
     palette: {
       mode: themeType,

@@ -21,8 +21,6 @@ export const AxiosInterceptor = () => {
 
   axios.interceptors.response.use(
     (response: AxiosResponse) => response,
-    (error: AxiosError) => {
-      return { ...error.response };
-    }
+    (error: AxiosError) => error.response
   );
 };

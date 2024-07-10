@@ -47,6 +47,5 @@ export async function getServerSideProps() {
   const {
     data: { genres },
   } = await getGenres();
-  console.log(data);
   return { props: { data, genres } };
 }

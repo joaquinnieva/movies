@@ -1,5 +1,4 @@
 import { MaterialProvider, Navbar } from '@/components';
-import { AxiosInterceptor } from '@/services';
 import { StoreProvider } from '@/store';
 import '@/styles/globals.css';
 import '@fontsource/roboto/300.css';
@@ -10,7 +9,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
-  AxiosInterceptor();
   return (
     <>
       <Head>
