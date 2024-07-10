@@ -40,11 +40,11 @@ export default function Search({ data, genres }: { data: ResponseDiscover; genre
 }
 export async function getServerSideProps({ query }: { query: any }) {
   let resData;
-  if (query?.with_genres) {
-    const { data } = await getExplore(query);
+  if (query?.query) {
+    const { data } = await getSearch(query);
     resData = data;
   } else {
-    const { data } = await getSearch(query);
+    const { data } = await getExplore(query);
     resData = data;
   }
   const {

@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import themeReducer from './DetailSlice';
+import storeReducer from './StoreSlice';
 
 export const makeStore = () => {
   return configureStore({
-    reducer: { themeReducer },
+    reducer: { storeReducer },
   });
 };
 

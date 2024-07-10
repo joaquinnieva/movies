@@ -1,14 +1,27 @@
 import { BASE_MEDIA } from '@/consts';
+import { addFav, removeFav, useAppDispatch, useAppSelector } from '@/store';
 import { Movie } from '@/types';
-import { Button } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Button, Tooltip } from '@mui/material';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 
 export function MovieCard({ movie, withDescription = false }: { movie: Movie; withDescription?: boolean }) {
   const router = useRouter();
+  const favs = useAppSelector((state) => state.storeReducer.favs);
+  const dispatch = useAppDispatch();
+
+  const isFav = useMemo(() => {
+    return favs.findIndex((f) => f.id === movie.id) !== -1;
+  }, [favs]);
 
   const handleViewDetail = () => {
     router.push(`/detail/${movie.id}`);
+  };
+  const handleAddFav = () => {
+    isFav ? dispatch(removeFav(movie)) : dispatch(addFav(movie));
   };
   return (
     <div className="border rounded-lg h-full w-full">
@@ -21,7 +34,13 @@ export function MovieCard({ movie, withDescription = false }: { movie: Movie; wi
           </h2>
           {withDescription && <p className="leading-relaxed text-base h-24 overflow-hidden pb-1">{movie.overview}</p>}
         </div>
-        <div className="flex justify-center items-end">
+        <div className="flex justify-center items-end gap-2">
+          <Tooltip title={isFav ? 'Quitar de favoritos' : 'Agregar a favoritos'}>
+            <Button className="mx-auto w-full" variant="contained" onClick={handleAddFav}>
+              {isFav ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+            </Button>
+          </Tooltip>
+
           <Button className="mx-auto w-full" variant="contained" onClick={handleViewDetail}>
             Detalle
           </Button>
