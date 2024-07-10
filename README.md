@@ -1,40 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movie Recommendation Application with Server-Side Rendering
 
-## Getting Started
+Welcome to the ultimate movie recommendation application challenge! In this challenge, you'll build an application that allows users to discover and explore movies with the added benefit of Server-Side Rendering (SSR) for improved performance and SEO. You'll utilize The Movie Database (TMDb) API to fetch movie data and incorporate it into your application. You'll implement this using Next.js, incorporating Material or Tailwind UI for the user interface and TypeScript for type safety.
 
-First, run the development server:
+## Requirements
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To complete this challenge, your application should meet the following requirements:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Search Functionality**: Allow users to search for movies by title, genre, or any other relevant criteria.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. **Display Movie Details**: Display detailed information about the selected movie, including its title, release date, genres, synopsis, and rating.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. **Display Similar Movies**: Show a list of similar movies based on the selected movie's genre or other relevant attributes.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. **Use React Router**: Utilize Next.js's routing system to create different pages for home, search results, movie details, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. **Use React Redux Toolkit**: Manage the application's state using React Redux Toolkit, including storing the current movie, search results, and other relevant data.
 
-## Learn More
+6. **Use Axios for API Calls**: Utilize Axios to make API calls to The Movie Database (TMDb) API to retrieve movie data.
 
-To learn more about Next.js, take a look at the following resources:
+7. **Implement Material or Tailwind UI**: Create a visually appealing user interface using Material or Tailwind UI components to display movie information in a clear and concise way.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+8. **Server-Side Rendering (SSR)**: Implement SSR to pre-render pages on the server for improved performance and SEO.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Bonus Features
 
-## Deploy on Vercel
+As a bonus, you can implement the following features:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **User Authentication**: Allow users to create accounts, log in, and save favorite movies or create watchlists.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Dark Mode**: Implement a dark mode feature that allows users to toggle between light and dark themes.
+
+3. **Movie Recommendations**: Incorporate a recommendation engine that suggests movies based on the user's watch history or preferences.
+
+4. **Integration with External APIs**: Integrate additional APIs, such as movie trailers from YouTube or reviews from IMDb, to enhance the user experience.
+
+5. **Localization**: Implement localization to support multiple languages for the application interface.
+
+6. **Responsive Design**: Ensure the application is fully responsive and works well on various devices and screen sizes.
+
+## Technical Stack
+
+- Next.js for building the application with SSR.
+- TypeScript for type safety.
+- Material or Tailwind UI for the user interface.
+- React Redux Toolkit for state management.
+- Axios for making API calls.
+- ESLint with the Airbnb configuration for code linting.
