@@ -1,3 +1,4 @@
+import { LOGO_URI } from '@/consts';
 import { changeTheme, useAppDispatch } from '@/store';
 import { Button } from '@mui/material';
 import Image from 'next/image';
@@ -19,12 +20,7 @@ export function Navbar() {
     <header className="text-gray-600 body-font">
       <nav className="container mx-auto flex flex-wrap p-5 justify-between flex-row items-center">
         <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 relative">
-          <Image
-            alt=""
-            width={100}
-            height={100}
-            src={'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg'}
-          />
+          <Image alt="logo" width={100} height={100} src={LOGO_URI} />
         </Link>
         <span className="flex flex-wrap items-center text-base justify-center gap-2">
           <Button variant="outlined" onClick={handleClickExplore}>

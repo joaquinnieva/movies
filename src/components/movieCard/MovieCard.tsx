@@ -1,5 +1,4 @@
 import { BASE_MEDIA } from '@/consts';
-import { changeProduct, useAppDispatch } from '@/store';
 import { Movie } from '@/types';
 import { Button } from '@mui/material';
 import Image from 'next/image';
@@ -7,10 +6,8 @@ import { useRouter } from 'next/router';
 
 export function MovieCard({ movie, withDescription = false }: { movie: Movie; withDescription?: boolean }) {
   const router = useRouter();
-  const dispatch = useAppDispatch();
 
   const handleViewDetail = () => {
-    dispatch(changeProduct(movie));
     router.push(`/detail/${movie.id}`);
   };
   return (
